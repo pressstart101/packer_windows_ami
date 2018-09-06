@@ -1,0 +1,17 @@
+        "provisioners": [
+        {
+            "type": "powershell",
+            "scripts": [
+                "./rdp.ps1",
+                "./scripts/EC2Config.ps1",
+                "./scripts/BundleConfig.ps1"
+            ]
+
+        },
+        {
+             "type": "powershell",
+             "inline": [
+                  "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\InitializeInstance.ps1 -Schedule"
+              ]
+        }
+    ]
